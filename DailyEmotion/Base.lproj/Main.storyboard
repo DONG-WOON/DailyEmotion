@@ -21,107 +21,177 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c1m-gq-PhQ">
                                 <rect key="frame" x="0.0" y="64" width="414" height="124.66666666666669"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="happy" translatesAutoresizingMaskIntoConstraints="NO" id="b2g-Qa-HWb">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="5Pa-CA-e5X">
+                                        <rect key="frame" x="364" y="32.333333333333329" width="30" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="f93-xG-ivS"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="1점">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DD6-yJ-Mua">
                                         <rect key="frame" x="176" y="31.000000000000004" width="62" height="62.333333333333343"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="b2g-Qa-HWb" secondAttribute="height" multiplier="1:1" id="hky-Z0-Q0y"/>
+                                            <constraint firstAttribute="width" secondItem="DD6-yJ-Mua" secondAttribute="height" multiplier="1:1" id="zea-Sw-FEC"/>
                                         </constraints>
-                                    </imageView>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="happy"/>
+                                        <connections>
+                                            <action selector="emotionButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RG5-r4-3wB"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" name="happy"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstItem="b2g-Qa-HWb" firstAttribute="centerX" secondItem="c1m-gq-PhQ" secondAttribute="centerX" id="Sh5-ly-IlO"/>
-                                    <constraint firstItem="b2g-Qa-HWb" firstAttribute="height" secondItem="c1m-gq-PhQ" secondAttribute="height" multiplier="0.5" id="oUk-Qg-0xj"/>
-                                    <constraint firstItem="b2g-Qa-HWb" firstAttribute="centerY" secondItem="c1m-gq-PhQ" secondAttribute="centerY" id="s01-gv-jY6"/>
+                                    <constraint firstItem="5Pa-CA-e5X" firstAttribute="centerY" secondItem="c1m-gq-PhQ" secondAttribute="centerY" id="59Y-8B-4j7"/>
+                                    <constraint firstAttribute="trailing" secondItem="5Pa-CA-e5X" secondAttribute="trailing" constant="20" id="5K7-YG-TI4"/>
+                                    <constraint firstItem="DD6-yJ-Mua" firstAttribute="height" secondItem="c1m-gq-PhQ" secondAttribute="height" multiplier="0.5" id="Dgj-eI-2YA"/>
+                                    <constraint firstItem="DD6-yJ-Mua" firstAttribute="centerX" secondItem="c1m-gq-PhQ" secondAttribute="centerX" id="hrS-gc-CAx"/>
+                                    <constraint firstItem="DD6-yJ-Mua" firstAttribute="centerY" secondItem="c1m-gq-PhQ" secondAttribute="centerY" id="yzb-vD-uPv"/>
                                 </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="KPq-mf-mQW" appends="YES" id="6cd-ew-rs0"/>
-                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QJ2-Az-vvs">
                                 <rect key="frame" x="0.0" y="188.66666666666666" width="414" height="124.66666666666666"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="good" translatesAutoresizingMaskIntoConstraints="NO" id="3Em-ox-1TH">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="yMl-2W-OMm">
+                                        <rect key="frame" x="364" y="32.333333333333343" width="30" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="yc1-PN-8e1"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="1점">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FJC-Wb-tPf">
                                         <rect key="frame" x="176" y="31.000000000000004" width="62" height="62.333333333333343"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="3Em-ox-1TH" secondAttribute="height" multiplier="1:1" id="ei4-fh-En8"/>
+                                            <constraint firstAttribute="width" secondItem="FJC-Wb-tPf" secondAttribute="height" multiplier="1:1" id="j2K-SB-6fI"/>
                                         </constraints>
-                                    </imageView>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="happy"/>
+                                        <connections>
+                                            <action selector="emotionButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eob-mz-HZA"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" name="good"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstItem="3Em-ox-1TH" firstAttribute="centerX" secondItem="QJ2-Az-vvs" secondAttribute="centerX" id="eh7-le-yUF"/>
-                                    <constraint firstItem="3Em-ox-1TH" firstAttribute="height" secondItem="QJ2-Az-vvs" secondAttribute="height" multiplier="0.5" id="rG3-fM-72a"/>
-                                    <constraint firstItem="3Em-ox-1TH" firstAttribute="centerY" secondItem="QJ2-Az-vvs" secondAttribute="centerY" id="xUo-ID-hoZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="yMl-2W-OMm" secondAttribute="trailing" constant="20" id="J2r-DW-xfK"/>
+                                    <constraint firstItem="FJC-Wb-tPf" firstAttribute="centerY" secondItem="QJ2-Az-vvs" secondAttribute="centerY" id="LQu-cc-Xf7"/>
+                                    <constraint firstItem="FJC-Wb-tPf" firstAttribute="height" secondItem="QJ2-Az-vvs" secondAttribute="height" multiplier="0.5" id="ML2-Lk-LPs"/>
+                                    <constraint firstItem="yMl-2W-OMm" firstAttribute="centerY" secondItem="QJ2-Az-vvs" secondAttribute="centerY" id="g2t-of-sgW"/>
+                                    <constraint firstItem="FJC-Wb-tPf" firstAttribute="centerX" secondItem="QJ2-Az-vvs" secondAttribute="centerX" id="nNO-lA-wXT"/>
                                 </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="9Cj-6x-z3a" appends="YES" id="8Ci-sX-Tme"/>
-                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TVr-rS-ehP">
                                 <rect key="frame" x="0.0" y="313.33333333333331" width="414" height="124.33333333333331"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="soso" translatesAutoresizingMaskIntoConstraints="NO" id="TGw-yz-oRA">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="Z9r-Db-5nc">
+                                        <rect key="frame" x="364" y="32.333333333333371" width="30" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="HLc-y5-mQ0"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="1점">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbC-q0-Y9c">
                                         <rect key="frame" x="176" y="31.000000000000004" width="62" height="62.333333333333343"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="TGw-yz-oRA" secondAttribute="height" multiplier="1:1" id="HdB-A9-SPe"/>
+                                            <constraint firstAttribute="width" secondItem="vbC-q0-Y9c" secondAttribute="height" multiplier="1:1" id="B6S-gp-LdH"/>
                                         </constraints>
-                                    </imageView>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="happy"/>
+                                        <connections>
+                                            <action selector="emotionButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V3x-pS-a1W"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" name="soso"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstItem="TGw-yz-oRA" firstAttribute="centerX" secondItem="TVr-rS-ehP" secondAttribute="centerX" id="0VL-EE-9vQ"/>
-                                    <constraint firstItem="TGw-yz-oRA" firstAttribute="centerY" secondItem="TVr-rS-ehP" secondAttribute="centerY" id="gH3-hF-3rs"/>
-                                    <constraint firstItem="TGw-yz-oRA" firstAttribute="height" secondItem="TVr-rS-ehP" secondAttribute="height" multiplier="0.5" id="h4o-Kg-oM0"/>
+                                    <constraint firstItem="vbC-q0-Y9c" firstAttribute="centerX" secondItem="TVr-rS-ehP" secondAttribute="centerX" id="Rer-mn-h2K"/>
+                                    <constraint firstItem="vbC-q0-Y9c" firstAttribute="centerY" secondItem="TVr-rS-ehP" secondAttribute="centerY" id="fM4-z7-vI7"/>
+                                    <constraint firstItem="vbC-q0-Y9c" firstAttribute="height" secondItem="TVr-rS-ehP" secondAttribute="height" multiplier="0.5" id="iak-hw-Vk9"/>
+                                    <constraint firstItem="Z9r-Db-5nc" firstAttribute="centerY" secondItem="TVr-rS-ehP" secondAttribute="centerY" id="sHr-1d-ZnG"/>
+                                    <constraint firstAttribute="trailing" secondItem="Z9r-Db-5nc" secondAttribute="trailing" constant="20" id="yrg-EP-hFQ"/>
                                 </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="F4k-4H-0iU" appends="YES" id="iGr-Xh-gaN"/>
-                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kkg-a2-Bs2">
                                 <rect key="frame" x="0.0" y="437.66666666666669" width="414" height="124.66666666666669"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="upset" translatesAutoresizingMaskIntoConstraints="NO" id="aML-Ag-aQT">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="kzV-6F-gex">
+                                        <rect key="frame" x="364" y="32.333333333333314" width="30" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="23k-HD-Iez"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="1점">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbN-Px-C5D">
                                         <rect key="frame" x="176" y="31.333333333333318" width="62" height="62.333333333333343"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="aML-Ag-aQT" secondAttribute="height" multiplier="1:1" id="qiZ-f4-rRA"/>
+                                            <constraint firstAttribute="width" secondItem="qbN-Px-C5D" secondAttribute="height" multiplier="1:1" id="jr4-qB-WY9"/>
                                         </constraints>
-                                    </imageView>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="happy"/>
+                                        <connections>
+                                            <action selector="emotionButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WsJ-XC-79E"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" name="upset"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstItem="aML-Ag-aQT" firstAttribute="height" secondItem="kkg-a2-Bs2" secondAttribute="height" multiplier="0.5" id="316-Np-mKn"/>
-                                    <constraint firstItem="aML-Ag-aQT" firstAttribute="centerX" secondItem="kkg-a2-Bs2" secondAttribute="centerX" id="Q75-yA-uFR"/>
-                                    <constraint firstItem="aML-Ag-aQT" firstAttribute="centerY" secondItem="kkg-a2-Bs2" secondAttribute="centerY" id="dtW-ZY-mNr"/>
+                                    <constraint firstItem="qbN-Px-C5D" firstAttribute="centerY" secondItem="kkg-a2-Bs2" secondAttribute="centerY" id="ReR-yo-TXF"/>
+                                    <constraint firstItem="qbN-Px-C5D" firstAttribute="height" secondItem="kkg-a2-Bs2" secondAttribute="height" multiplier="0.5" id="aYH-Ro-RoH"/>
+                                    <constraint firstItem="qbN-Px-C5D" firstAttribute="centerX" secondItem="kkg-a2-Bs2" secondAttribute="centerX" id="nQ3-ZD-uZ4"/>
+                                    <constraint firstAttribute="trailing" secondItem="kzV-6F-gex" secondAttribute="trailing" constant="20" id="sWu-IG-f37"/>
+                                    <constraint firstItem="kzV-6F-gex" firstAttribute="centerY" secondItem="kkg-a2-Bs2" secondAttribute="centerY" id="zJA-a8-beX"/>
                                 </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="HTe-gf-7h7" appends="YES" id="wYD-mU-MJ2"/>
-                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HGy-jY-CCu">
                                 <rect key="frame" x="0.0" y="562.33333333333337" width="414" height="124.66666666666663"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sad" translatesAutoresizingMaskIntoConstraints="NO" id="0at-1F-Amo">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="Y5P-ze-eGs">
+                                        <rect key="frame" x="364" y="32.333333333333258" width="30" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="gn4-C0-BGP"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="1점">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IcS-BD-RKf">
                                         <rect key="frame" x="176" y="31.333333333333261" width="62" height="62.333333333333343"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="0at-1F-Amo" secondAttribute="height" multiplier="1:1" id="sFP-UW-ugG"/>
+                                            <constraint firstAttribute="width" secondItem="IcS-BD-RKf" secondAttribute="height" multiplier="1:1" id="OwN-65-zic"/>
                                         </constraints>
-                                    </imageView>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="happy"/>
+                                        <connections>
+                                            <action selector="emotionButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Lg-gI-Zpt"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" name="sad"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstItem="0at-1F-Amo" firstAttribute="centerX" secondItem="HGy-jY-CCu" secondAttribute="centerX" id="6jn-Fa-5l8"/>
-                                    <constraint firstItem="0at-1F-Amo" firstAttribute="centerY" secondItem="HGy-jY-CCu" secondAttribute="centerY" id="Yv7-Ir-tCT"/>
-                                    <constraint firstItem="0at-1F-Amo" firstAttribute="height" secondItem="HGy-jY-CCu" secondAttribute="height" multiplier="0.5" id="ZrQ-XT-UqX"/>
+                                    <constraint firstItem="IcS-BD-RKf" firstAttribute="centerY" secondItem="HGy-jY-CCu" secondAttribute="centerY" id="0hp-jU-yQN"/>
+                                    <constraint firstItem="IcS-BD-RKf" firstAttribute="centerX" secondItem="HGy-jY-CCu" secondAttribute="centerX" id="2DT-Cq-D0c"/>
+                                    <constraint firstAttribute="trailing" secondItem="Y5P-ze-eGs" secondAttribute="trailing" constant="20" id="9gB-N9-4z6"/>
+                                    <constraint firstItem="Y5P-ze-eGs" firstAttribute="centerY" secondItem="HGy-jY-CCu" secondAttribute="centerY" id="LJg-JZ-gNK"/>
+                                    <constraint firstItem="IcS-BD-RKf" firstAttribute="height" secondItem="HGy-jY-CCu" secondAttribute="height" multiplier="0.5" id="qQR-bd-ELg"/>
                                 </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Md9-jk-fhn" appends="YES" id="a2h-c0-abM"/>
-                                </connections>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -150,33 +220,20 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Daily Emotion" id="58y-mJ-0HI"/>
+                    <connections>
+                        <outletCollection property="emotionSideButtons" destination="5Pa-CA-e5X" collectionClass="NSMutableArray" id="quK-cM-85w"/>
+                        <outletCollection property="emotionSideButtons" destination="yMl-2W-OMm" collectionClass="NSMutableArray" id="0mF-2u-QIv"/>
+                        <outletCollection property="emotionSideButtons" destination="Z9r-Db-5nc" collectionClass="NSMutableArray" id="b6W-xN-lWa"/>
+                        <outletCollection property="emotionSideButtons" destination="kzV-6F-gex" collectionClass="NSMutableArray" id="AOd-w7-0Ii"/>
+                        <outletCollection property="emotionSideButtons" destination="Y5P-ze-eGs" collectionClass="NSMutableArray" id="CkL-te-Nwr"/>
+                        <outletCollection property="emotionButtons" destination="DD6-yJ-Mua" collectionClass="NSMutableArray" id="TmB-rz-n12"/>
+                        <outletCollection property="emotionButtons" destination="FJC-Wb-tPf" collectionClass="NSMutableArray" id="L3D-C1-dOd"/>
+                        <outletCollection property="emotionButtons" destination="vbC-q0-Y9c" collectionClass="NSMutableArray" id="dz2-y7-VIr"/>
+                        <outletCollection property="emotionButtons" destination="qbN-Px-C5D" collectionClass="NSMutableArray" id="mj0-7r-pZj"/>
+                        <outletCollection property="emotionButtons" destination="IcS-BD-RKf" collectionClass="NSMutableArray" id="PcD-CI-csN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="KPq-mf-mQW">
-                    <connections>
-                        <action selector="happyEmotionTapped:" destination="BYZ-38-t0r" id="f3Z-Vi-bFC"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="9Cj-6x-z3a">
-                    <connections>
-                        <action selector="goodEmotionTapped:" destination="BYZ-38-t0r" id="AQk-77-GD8"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="F4k-4H-0iU">
-                    <connections>
-                        <action selector="sosoEmotionTapped:" destination="BYZ-38-t0r" id="yHs-of-h97"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="HTe-gf-7h7">
-                    <connections>
-                        <action selector="upsetEmotionTapped:" destination="BYZ-38-t0r" id="MxE-1D-2PY"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="Md9-jk-fhn">
-                    <connections>
-                        <action selector="sadEmotionTapped:" destination="BYZ-38-t0r" id="kzC-x0-rAg"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2044.9275362318842" y="-380.70652173913044"/>
         </scene>
@@ -439,12 +496,8 @@
     </scenes>
     <resources>
         <image name="chart.bar" catalog="system" width="128" height="89"/>
-        <image name="good" width="52" height="48"/>
         <image name="happy" width="53" height="51"/>
         <image name="pencil.circle" catalog="system" width="128" height="123"/>
-        <image name="sad" width="54" height="50"/>
-        <image name="soso" width="50" height="38"/>
-        <image name="upset" width="52" height="48"/>
         <namedColor name="good">
             <color red="0.9529411793" green="0.86666667460000002" blue="0.57647061349999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

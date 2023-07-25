@@ -8,32 +8,61 @@
 import UIKit
 
 class MainViewController: UIViewController {
+ 
+    @IBOutlet var emotionButtons: [UIButton]!
+    @IBOutlet var emotionSideButtons: [UIButton]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+       
+        mapping(Emotion.allCases, with: emotionButtons)
+        mapping(Emotion.allCases, with: emotionSideButtons)
+        
+        addMenu(at: emotionSideButtons)
     }
+    
+    @IBAction func emotionButtonDidTapped(_ sender: UIButton) {
 
-    @IBAction func happyEmotionTapped(_ sender: UITapGestureRecognizer) {
-        emotions[.happy]! += 1
+        guard let emotion = Emotion(rawValue: sender.tag) else {
+            return
+        }
+        
+        let index = sender.tag
+        let emotionSideButton = emotionSideButtons[index]
+        switch emotionSideButton.currentTitle {
+        case "1점": emotions[emotion]! += 1
+        case "5점": emotions[emotion]! += 5
+        case "10점": emotions[emotion]! += 10
+        default:
+            return
+        }
     }
     
-    @IBAction func goodEmotionTapped(_ sender: UITapGestureRecognizer) {
-        emotions[.good]! += 1
+    fileprivate func mapping(_ emotions: [Emotion], with buttons: [UIButton]) {
+        
+        for emotion in emotions {
+            buttons[emotion.tag].tag = emotion.tag
+        }
     }
     
-    @IBAction func sosoEmotionTapped(_ sender: UITapGestureRecognizer) {
-        emotions[.soso]! += 1
+    fileprivate func addMenu(at buttons: [UIButton]) {
+        
+        buttons.forEach { button in
+            button.menu = UIMenu(children: [
+                UIAction(title: "1점") { action in
+                    button.setTitle(action.title, for: .normal)
+                },
+                UIAction(title: "5점") { action in
+                    button.setTitle(action.title, for: .normal)
+                },
+                UIAction(title: "10점") { action in
+                    button.setTitle(action.title, for: .normal)
+                }
+            ])
+            
+            button.changesSelectionAsPrimaryAction = false
+            button.showsMenuAsPrimaryAction = true
+        }
     }
-    
-    @IBAction func upsetEmotionTapped(_ sender: UITapGestureRecognizer) {
-        emotions[.upset]! += 1
-    }
-    
-    @IBAction func sadEmotionTapped(_ sender: UITapGestureRecognizer) {
-        emotions[.sad]! += 1
-    }
-    
-    
 }
 

@@ -5,7 +5,7 @@
 //  Created by 서동운 on 7/25/23.
 //
 
-enum Emotion: Int {
+enum Emotion: Int, CaseIterable {
     case happy
     case good
     case soso
