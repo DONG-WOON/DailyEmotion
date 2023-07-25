@@ -19,6 +19,7 @@ class MainViewController: UIViewController {
         mapping(Emotion.allCases, with: emotionSideButtons)
         
         addMenu(at: emotionSideButtons)
+        addHaptic(at: emotionButtons)
     }
     
     @IBAction func emotionButtonDidTapped(_ sender: UIButton) {
@@ -62,6 +63,14 @@ class MainViewController: UIViewController {
             
             button.changesSelectionAsPrimaryAction = false
             button.showsMenuAsPrimaryAction = true
+        }
+    }
+    
+    fileprivate func addHaptic(at buttons: [UIButton]) {
+        buttons.forEach { button in
+            button.addAction(UIAction { _ in
+                Haptics.shared.notify(.success)
+            }, for: .touchUpInside)
         }
     }
 }
