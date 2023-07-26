@@ -219,18 +219,22 @@
                             <constraint firstItem="kkg-a2-Bs2" firstAttribute="top" secondItem="TVr-rS-ehP" secondAttribute="bottom" id="y1M-xT-w3Q"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Daily Emotion" id="58y-mJ-0HI"/>
+                    <navigationItem key="navigationItem" title="Daily Emotion" id="58y-mJ-0HI">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="gobackward" catalog="system" id="F1o-fp-a0I">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outletCollection property="emotionSideButtons" destination="5Pa-CA-e5X" collectionClass="NSMutableArray" id="quK-cM-85w"/>
-                        <outletCollection property="emotionSideButtons" destination="yMl-2W-OMm" collectionClass="NSMutableArray" id="0mF-2u-QIv"/>
-                        <outletCollection property="emotionSideButtons" destination="Z9r-Db-5nc" collectionClass="NSMutableArray" id="b6W-xN-lWa"/>
-                        <outletCollection property="emotionSideButtons" destination="kzV-6F-gex" collectionClass="NSMutableArray" id="AOd-w7-0Ii"/>
-                        <outletCollection property="emotionSideButtons" destination="Y5P-ze-eGs" collectionClass="NSMutableArray" id="CkL-te-Nwr"/>
-                        <outletCollection property="emotionButtons" destination="DD6-yJ-Mua" collectionClass="NSMutableArray" id="TmB-rz-n12"/>
-                        <outletCollection property="emotionButtons" destination="FJC-Wb-tPf" collectionClass="NSMutableArray" id="L3D-C1-dOd"/>
-                        <outletCollection property="emotionButtons" destination="vbC-q0-Y9c" collectionClass="NSMutableArray" id="dz2-y7-VIr"/>
-                        <outletCollection property="emotionButtons" destination="qbN-Px-C5D" collectionClass="NSMutableArray" id="mj0-7r-pZj"/>
-                        <outletCollection property="emotionButtons" destination="IcS-BD-RKf" collectionClass="NSMutableArray" id="PcD-CI-csN"/>
+                        <outlet property="goodButton" destination="FJC-Wb-tPf" id="W2k-d1-LD1"/>
+                        <outlet property="goodSideButton" destination="yMl-2W-OMm" id="SH2-NE-O4f"/>
+                        <outlet property="happyButton" destination="DD6-yJ-Mua" id="6wS-4p-ecf"/>
+                        <outlet property="happySideButton" destination="5Pa-CA-e5X" id="cpr-my-jpT"/>
+                        <outlet property="sadButton" destination="IcS-BD-RKf" id="Owg-EI-XmF"/>
+                        <outlet property="sadSideButton" destination="Y5P-ze-eGs" id="dbF-We-XkM"/>
+                        <outlet property="sosoButton" destination="vbC-q0-Y9c" id="x92-sm-L53"/>
+                        <outlet property="sosoSideButton" destination="Z9r-Db-5nc" id="njx-IE-xyt"/>
+                        <outlet property="upsetButton" destination="qbN-Px-C5D" id="SZD-I9-5O1"/>
+                        <outlet property="upsetSideButton" destination="kzV-6F-gex" id="LfJ-Op-8DJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -416,7 +420,14 @@
                             <constraint firstItem="bBv-oc-Xiz" firstAttribute="top" secondItem="w0u-ve-uBB" secondAttribute="top" constant="10" id="uap-HC-KXN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Daily Emotion" id="wgJ-HP-pSt"/>
+                    <navigationItem key="navigationItem" title="Daily Emotion" id="wgJ-HP-pSt">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="trash" catalog="system" id="e0Z-hF-BOp">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="resetBarButtonDidTapped:" destination="bXp-AW-dQL" id="QQx-ap-Nx0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="goodScoreLabel" destination="rsC-Dm-mdi" id="Tod-Mv-OqU"/>
                         <outlet property="happyScoreLabel" destination="uOL-BT-hmZ" id="TBx-DN-KaR"/>
@@ -440,6 +451,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ka0-DK-ddf" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LaS-PW-jKS">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" systemColor="labelColor"/>
@@ -496,22 +508,24 @@
     </scenes>
     <resources>
         <image name="chart.bar" catalog="system" width="128" height="89"/>
+        <image name="gobackward" catalog="system" width="119" height="128"/>
         <image name="happy" width="53" height="51"/>
         <image name="pencil.circle" catalog="system" width="128" height="123"/>
+        <image name="trash" catalog="system" width="117" height="128"/>
         <namedColor name="good">
-            <color red="0.9529411793" green="0.86666667460000002" blue="0.57647061349999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.95300000905990601" green="0.86699998378753662" blue="0.57599997520446777" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="happy">
-            <color red="0.90588235859999999" green="0.45098042490000001" blue="0.55294120309999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.90600001811981201" green="0.45100000500679016" blue="0.55299997329711914" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="sad">
-            <color red="0.24313727020000001" green="0.40000003579999999" blue="0.58823531870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.24300000071525574" green="0.40000000596046448" blue="0.58799999952316284" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="soso">
-            <color red="0.97254902119999997" green="0.98039215800000001" blue="0.71372550729999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.97299998998641968" green="0.98000001907348633" blue="0.71399998664855957" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="upset">
-            <color red="0.72941178080000002" green="0.93333333730000001" blue="0.88235294819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.72899997234344482" green="0.93300002813339233" blue="0.88200002908706665" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

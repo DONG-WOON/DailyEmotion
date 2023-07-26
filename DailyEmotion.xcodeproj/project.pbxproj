@@ -16,6 +16,7 @@
 		72450A4D2A6FB54D00B8551B /* Emotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72450A4C2A6FB54D00B8551B /* Emotion.swift */; };
 		72450A4F2A6FBF8B00B8551B /* StaticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72450A4E2A6FBF8B00B8551B /* StaticViewController.swift */; };
 		72450A512A70184800B8551B /* Haptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72450A502A70184800B8551B /* Haptic.swift */; };
+		72A504C92A70F9D100A87362 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A504C82A70F9D100A87362 /* Score.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		72450A4C2A6FB54D00B8551B /* Emotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emotion.swift; sourceTree = "<group>"; };
 		72450A4E2A6FBF8B00B8551B /* StaticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticViewController.swift; sourceTree = "<group>"; };
 		72450A502A70184800B8551B /* Haptic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptic.swift; sourceTree = "<group>"; };
+		72A504C82A70F9D100A87362 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				72450A3A2A6FB49400B8551B /* SceneDelegate.swift */,
 				72450A502A70184800B8551B /* Haptic.swift */,
 				72450A4C2A6FB54D00B8551B /* Emotion.swift */,
+				72A504C82A70F9D100A87362 /* Score.swift */,
 				72450A3C2A6FB49400B8551B /* MainViewController.swift */,
 				72450A4E2A6FBF8B00B8551B /* StaticViewController.swift */,
 				72450A3E2A6FB49400B8551B /* Main.storyboard */,
@@ -147,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72A504C92A70F9D100A87362 /* Score.swift in Sources */,
 				72450A512A70184800B8551B /* Haptic.swift in Sources */,
 				72450A3D2A6FB49400B8551B /* MainViewController.swift in Sources */,
 				72450A392A6FB49400B8551B /* AppDelegate.swift in Sources */,
